@@ -33,7 +33,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #   - get_yahoo
 #   - get_aol
 
-class rick_atsley:
+class rick_astley:
     # Initialise the AI assistant
     # This function is called when the AI assistant is created
     # It sets the name, version, built date and creator of the AI assistant
@@ -170,7 +170,7 @@ def main():
     # This will continue until the AI assistant is terminated
     # The AI assistant is terminated by saying "goodbye"
     # The AI assistant will then say "goodbye" and terminate
-    rick = rick_atsley()
+    rick = rick_astley()
     speak("Hello, I am Rick Astley. How can I help you?")
     while True:
         query = listen().lower()
