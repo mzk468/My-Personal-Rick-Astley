@@ -70,4 +70,3 @@ def wakeUp():
         running = False
     pygame.display.update()
 
-wakeUp()
