@@ -7,10 +7,15 @@ volume = engine.getProperty('volume')
 engine.setProperty('volume', 1.3)
 engine.setProperty('voice', engine.getProperty("voices")[15].id)  # Using voice 2 for Rick
 
+def setTalking():
+  with open("status", "w+") as file:
+    file.write("0,1")
+
 def play(filename):
   playsound.playsound("Audio/" + filename, True)
 
 def speak(input):
+  setTalking()
   input = input.split(".")  # Separate Strings whenever there are pauses
   for i in range(len(input)):
     input[i] = input[i].split(",")

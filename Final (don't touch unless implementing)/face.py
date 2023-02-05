@@ -1,23 +1,5 @@
 import pygame
 
-talking = True
-isThinking = False
-
-def setThinking():
-  pygame.display.set_caption("Hmm... Rick is thinking")
-  talking = False
-  isThinking = True
-
-def setTalking():
-  pygame.display.set_caption("Rick talks")
-  talking = True
-  isThinking = False
-  
-def setListening():
-  pygame.display.set_caption("Speak to Rick")
-  talking = False
-  isThinking = False
-
 def wakeUp():
   pygame.init()
   pygame.display.set_caption("Never gonna give you up")
@@ -41,22 +23,16 @@ def wakeUp():
   direction = False # False for down
 
   def moveMouth(direction):
-    if (talking):
-      if (direction):
-        mouthLocation[1] -= 1
-      else:
-        mouthLocation[1] += 1
+    if (direction):
+      mouthLocation[1] -= 1
+    else:
+      mouthLocation[1] += 1
 
   while (running):
     
     screen.blit(background, (0,0))
     screen.blit(rick, (0,0))
     screen.blit(rickmouth, (mouthLocation[0], mouthLocation[1]))
-
-    if (isThinking):
-      screen.blit(thinking, (200,450))
-    else:
-      screen.blit(thinking, (6969,6969))
 
     moveMouth(direction)
 
@@ -70,3 +46,4 @@ def wakeUp():
         running = False
     pygame.display.update()
 
+wakeUp()
