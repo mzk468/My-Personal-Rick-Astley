@@ -39,17 +39,17 @@ def moveMouth(direction):
     screen.blit(rick, (0,0))
     screen.blit(rickmouth, (mouthLocation[0], mouthLocation[1]))
 
-  if (isThinking):
-    screen.blit(thinking, (200,450))
-  else:
-    screen.blit(thinking, (6969,6969))
+    if (isThinking):
+      screen.blit(thinking, (200,450))
+    else:
+      screen.blit(thinking, (6969,6969))
 
-  moveMouth(direction)
+    moveMouth(direction)
 
-  if (mouthLocation[1] % 50) == 0:
-    direction = not direction
+    if (mouthLocation[1] % 50) == 0:
+      direction = not direction
 
-  for event in pygame.event.get():  
-    if event.type == pygame.QUIT:  
-      running = False
-  pygame.display.update()
+    for event in pygame.event.get():  
+      if event.type == pygame.QUIT:  
+        running = False
+    pygame.display.update()
