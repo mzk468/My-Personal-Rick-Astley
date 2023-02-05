@@ -18,7 +18,7 @@ def setListening():
   talking = False
   isThinking = False
 
-def main():
+def wakeUp():
   pygame.init()
   pygame.display.set_caption("Never gonna give you up")
   screen = pygame.display.set_mode((750,750))
@@ -70,4 +70,4 @@ def main():
         running = False
     pygame.display.update()
 
-main()
+wakeUp()

@@ -1,5 +1,6 @@
 import speech_recognition as sr
 
+
 rec = sr.Recognizer()
 
 mic = sr.Microphone(device_index=0)
