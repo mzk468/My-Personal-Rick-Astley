@@ -6,6 +6,10 @@
 
 Run BOTH the brain.py files and face.py files, and enter your inputs in the command line window!
 
+## Downloads
+
+Check releases tab
+
 ## Prerequisites
 
 Make sure the following libraries are installed:
@@ -15,3 +19,4 @@ Make sure the following libraries are installed:
 `pygame`
 
 You can install them all with the command ```pip install playsound pyttsx3 pygame```
+
