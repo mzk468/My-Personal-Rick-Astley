@@ -1,5 +1,23 @@
 import pygame
 
+talking = True
+isThinking = False
+
+def setThinking():
+  pygame.display.set_caption("Hmm... Rick is thinking")
+  talking = False
+  isThinking = True
+
+def setTalking():
+  pygame.display.set_caption("Rick talks")
+  talking = True
+  isThinking = False
+  
+def setListening():
+  pygame.display.set_caption("Speak to Rick")
+  talking = False
+  isThinking = False
+
 def main():
   pygame.init()
   pygame.display.set_caption("Never gonna give you up")
@@ -22,9 +40,6 @@ def main():
   mouthLocation = [0,0]
   direction = False # False for down
 
-  talking = True
-  isThinking = False
-
   def moveMouth(direction):
     if (talking):
       if (direction):
@@ -45,7 +60,7 @@ def main():
 
     moveMouth(direction)
 
-    mouthSize = 200 # Change to make mouth bigger
+    mouthSize = 50 # Change to make mouth bigger
 
     if (mouthLocation[1] % mouthSize) == 0:
       direction = not direction
