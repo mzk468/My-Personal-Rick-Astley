@@ -2,7 +2,7 @@ import pyttsx3
 import playsound
 
 engine = pyttsx3.init()
-engine.setProperty('rate', 135)
+engine.setProperty('rate', 115)
 volume = engine.getProperty('volume')
 engine.setProperty('volume', 1.3)
 engine.setProperty('voice', engine.getProperty("voices")[15].id)  # Using voice 2 for Rick
@@ -13,6 +13,9 @@ def setTalking():
 
 def play(filename):
   playsound.playsound("Audio/" + filename, True)
+
+def scream():
+  playsound.playsound("Audio/iii.mp3")
 
 def speak(input):
   setTalking()
@@ -41,11 +44,6 @@ def speak(input):
       if (len(processedInput) >= 1):
         if (processedInput[i] == "understand"):
           play("understand.mp3")
-          i += 1
-          continue
-
-        if processedInput[i].lower == "$scream$":
-          play("iii.mp3")
           i += 1
           continue
       
