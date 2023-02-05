@@ -42,6 +42,7 @@ def main():
 
   def moveMouth(direction):
     if (talking):
+        
       if (direction):
         mouthLocation[1] -= 1
       else:
