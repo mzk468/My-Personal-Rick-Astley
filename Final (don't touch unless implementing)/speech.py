@@ -155,7 +155,66 @@ def speak(input):
         i+=1
         continue
 
-      # Calling it a night here icl. Ill finish tomorrow.pls no touch :)
+      # Calling it a night here icl.
+
+      if zx[i] == "gonna":
+        if zx[i+1] == "make" and zx[i+2] == "you" and zx[i+3] == "understand":
+          play("gonna-make-you-understand.mp3")
+          i += 4
+          continue
+        if zx[i+1] == "let" and zx[i+2] == "you" and zx[i+3] == "down":
+          play("gonna-let-you-down.mp3")
+          i += 4
+          continue
+        if (zx[i + 1 ] == "give"):
+          if (zx[i+2] == "you" and zx[i+3] == "up"):
+            i+= 4
+            play("gonna-give-you-up.mp3")
+            continue
+          if (zx[i+2] == "up"):
+            i+= 3
+            play("gonna-give-up.mp3")
+            continue
+
+      if (zx[i] == "give" and zx[i+1] == "up"):
+        i+=2
+        play("give-up.mp3")
+        continue
+
+      if (zx[i] == "get" and zx[i+1] == "this" and zx[i+2] == "from"):
+        i+=3
+        play("get-this-from.mp3")
+        continue
+
+      if zx[i] == "feeling":
+        i+=1
+        play("feeling.mp3")
+        continue
+
+      if zx[i] == "dessert" or zx[i] == "desert":
+        i+=1
+        play("dessert.mp3")
+        continue
+    
+      if zx[i] == "cry":
+        i+=1
+        play("cry.mp3")
+        continue
+
+      if zx[i] == "any" and zx[i+1] == "other" and zx[i+2] == "guy":
+        i+=3
+        play("any-other-guy.mp3")
+        continue
+
+      if zx[i] == "a" and zx[i+1] == "full" and (zx[i+2] == "commitment" and zx[i+3] == "is" and zx[i+4] == "what" and zx[i+5] == "im" and zx[i+6] == "thinking" and zx[i+7] == "of") or (zx[i+2] == "commitments" and zx[i+3] == "what" and zx[i+4] == "im" and zx[i+5] == "thinking" and zx[i+6] == "of"):
+        if (zx[i+2] == "commitment"):
+          i+=8
+        else:
+          i+=7
+
+        play("a-full-commitment-is-what-im-thinking-of.mp3")
+        continue
+
 
       engine.say(zx)
       engine.runAndWait()
