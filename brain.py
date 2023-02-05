@@ -1,5 +1,4 @@
 import speech
-import threading
 import random
 
 print("Speak to Rick Astley himself! Please don't use punctuaution. No exclamation marks, no apostrophes, nothing. Please.")
