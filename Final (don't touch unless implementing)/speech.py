@@ -215,7 +215,7 @@ def speak(input):
               i+=4
               continue
 
-      # Calling it a night here icl.
+      # Calling it a night here icl. Say no more :)
 
       if processedInput[i] == "gonna":
         if processedInput[i+1] == "make" and processedInput[i+2] == "you" and processedInput[i+3] == "understand":
